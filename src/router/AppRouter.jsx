@@ -7,34 +7,34 @@ import { SearchPage } from "../heroes/Pages/SearchPage";
 import { HeroPage } from "../heroes/Pages/HeroPage";
 
 export  const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <HeroesApp/>,
-        children: [
-           {
-               path: "/marvel",
-                element: <MarvelPage />,
-            },
-           {
-                path: "/dc",
-               element: <DcPage />,
-           },
-           {
-                path: "/search",
-               element: <SearchPage />,
-           },
-           {
-                path: "/hero/:id",
-               element: <HeroPage />,
-           },
-        ],
-    },
-    {
-        path:"/login",
-        element:<LoginPage/>,
-    },
-    {
-        path:"/*",
-        element:<Navigate to={'/'}/>,
-    },
+  {
+    path: "/",
+    element: <HeroesApp/>,
+    children: [
+      {
+        path: "/marvel",
+        element: <MarvelPage />,
+      },
+      {
+        path: "/dc",
+        element: <DcPage />,
+      },
+      {
+        path: "/search",
+        element: <SearchPage />,
+      },
+      {
+        path: "/hero/:id",
+        element: <HeroPage />,
+      },
+    ],
+  },
+  {
+    path:"/login",
+    element:<LoginPage/>,
+  },
+  {
+    path:"/*",
+    element:<Navigate to={'/'}/>,
+  },
 ]);

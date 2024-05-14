@@ -14,8 +14,10 @@ module.exports = {
   rules: {
     "comma-dangle": ["error", "always-multiline"],
     'semi': ['error', 'always'],
-    'react/jsx-indent': ['error', 4], // Indentation for JSX
-    'react/jsx-indent-props': ['error', 4], // Indentation for JSX props
+    'react/jsx-indent': ['error', 2], // Indentation for JSX
+    'react/jsx-indent-props': ['error', 2], // Indentation for JSX props
+    "indent": ["error", 2],
+    "react/jsx-closing-bracket-location": ["error", "line-aligned"],
     "no-unused-expressions": ["error", {
       "allowShortCircuit": true
     }],
@@ -25,6 +27,10 @@ module.exports = {
     }],
     "react/jsx-max-props-per-line": ["error", { "maximum": 1, "when": "multiline" }],
     "react/jsx-first-prop-new-line": ["error", "multiline"],
-    "max-len": ["error", { "code": 120 }]
+    "max-len": ["error", { "code": 120 }],
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "arrow-parens": ["error", "always"],
+    
   },
 }

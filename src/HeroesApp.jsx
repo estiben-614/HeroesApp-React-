@@ -4,15 +4,15 @@ import { Navbar } from './ui/components/NavBar';
 export const HeroesApp = () => {
   return (
 
-      <>
-          <Navbar/>
+    <>
+      <Navbar/>
 
-          <div className="container">
-              <Outlet/>
-          </div>
+      <div className="container">
+        <Outlet/>
+      </div>
 
-          <Navigate to={"/marvel"}/>
-      </>
+      <Navigate to={"/marvel"}/>
+    </>
     
   );
 };
