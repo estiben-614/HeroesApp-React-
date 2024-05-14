@@ -31,10 +31,10 @@ export  const router = createBrowserRouter([
     },
     {
         path:"/login",
-        element:<LoginPage></LoginPage>
+        element:<LoginPage/>,
     },
     {
         path:"/",
-        element:<Navigate to={'/'}></Navigate>
-    }
+        element:<Navigate to={'/'}/>,
+    },
 ]);

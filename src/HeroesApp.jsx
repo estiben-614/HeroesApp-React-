@@ -1,17 +1,16 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import { Navbar } from './ui/components/NavBar'
+import { Outlet } from 'react-router-dom';
+import { Navbar } from './ui/components/NavBar';
 
 export const HeroesApp = () => {
   return (
 
-    <>
-        <Navbar></Navbar>
+      <>
+          <Navbar/>
 
-        <div className="container">
-            <Outlet></Outlet>
-        </div>
-    </>
+          <div className="container">
+              <Outlet/>
+          </div>
+      </>
     
-  )
-}
+  );
+};
