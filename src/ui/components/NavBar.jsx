@@ -2,15 +2,15 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 
 export const Navbar = () => {
-    const navigate=useNavigate()
+    const navigate=useNavigate();
 
     const onLoggout=()=>{
 
         //Redirige a esa ruta y replace:True evita que al devolverse, llegue a la pagina anterior 
         navigate('/login',{
-            replace:true
-        })
-    }
+            replace:true,
+        });
+    };
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
@@ -49,15 +49,15 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
                     
-                        <span className='nav-item nav-link text-primary'>
-                            Estiben
-                        </span>
+                    <span className='nav-item nav-link text-primary'>
+                        Estiben
+                    </span>
 
-                        <button onClick={onLoggout} className='nav-item nav-link btn'>
-                            Loggout
-                        </button>
+                    <button onClick={onLoggout} className='nav-item nav-link btn'>
+                        Loggout
+                    </button>
                 </ul>
             </div>
         </nav>
-    )
-}
+    );
+};

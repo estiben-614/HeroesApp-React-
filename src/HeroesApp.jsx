@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import { Navbar } from './ui/components/NavBar';
 
 export const HeroesApp = () => {
@@ -10,6 +10,8 @@ export const HeroesApp = () => {
           <div className="container">
               <Outlet/>
           </div>
+
+          <Navigate to={"/marvel"}/>
       </>
     
   );
