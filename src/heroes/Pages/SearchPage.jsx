@@ -9,7 +9,7 @@ export const SearchPage = () => {
 
   const navigate = useNavigate();
   //Usamos el hook del useForm para el manejo del formulario
-  const {buscador,onInputChange} = useForm({
+  const { buscador,onInputChange } = useForm({
     buscador:'', //Mismo nombre del input
   });
 
@@ -23,7 +23,7 @@ export const SearchPage = () => {
   };
   //Obtenemos la query
   const parsed = queryString.parse(location.search);
-  const {q = ''} = parsed;
+  const { q = '' } = parsed;
   const heroName = q;
 
   //Busquemos un array  con los heroes con ese query

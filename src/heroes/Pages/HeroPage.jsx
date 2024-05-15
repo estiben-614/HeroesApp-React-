@@ -5,7 +5,7 @@ export const HeroPage = () => {
 
   const navigate = useNavigate();
   //Recuperamos la query que viene en la URL. /hero/spiderman -> Obtenemos spiderman
-  const {id} = useParams();
+  const { id } = useParams();
   const heroe = heroes.find((h) => (h.id == id));
 
   if(!heroe){

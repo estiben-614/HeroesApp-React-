@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 
 
-export const HeroCard = ({hero}) => {
+export const HeroCard = ({ hero }) => {
     
   const imgUrl = `assets/heroes/${hero.id}.jpg`;
   return (
