@@ -1,11 +1,13 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/types/AuthContext';
 
 
 export const Navbar = () => {
   const navigate = useNavigate();
-
+  const { user, loggout } = useContext(AuthContext);
   const onLoggout = () => {
-
+    loggout();
     //Redirige a esa ruta y replace:True evita que al devolverse, llegue a la pagina anterior 
     navigate('/login',{
       replace:true,
@@ -25,20 +27,20 @@ export const Navbar = () => {
         <div className="navbar-nav">
 
           <NavLink 
-            className={({isActive}) => `nav-link ${(isActive) ? 'active' : ''}`} 
+            className={({ isActive }) => `nav-link ${(isActive) ? 'active' : ''}`} 
             to="/marvel"
           >
             Marvel
           </NavLink>
 
           <NavLink 
-            className={({isActive}) => `nav-link ${(isActive) ? 'active' : ''}`} 
+            className={({ isActive }) => `nav-link ${(isActive) ? 'active' : ''}`} 
             to="/dc"
           >
             DC
           </NavLink>
           <NavLink 
-            className={({isActive}) => `nav-link ${(isActive) ? 'active' : ''}`} 
+            className={({ isActive }) => `nav-link ${(isActive) ? 'active' : ''}`} 
             to="/search"
           >
             Search
@@ -50,7 +52,7 @@ export const Navbar = () => {
         <ul className="navbar-nav ml-auto">
                     
           <span className='nav-item nav-link text-primary'>
-            Estiben
+            {user?.name || ''}
           </span>
 
           <button onClick={onLoggout} className='nav-item nav-link btn'>
