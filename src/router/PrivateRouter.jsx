@@ -1,12 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/types/AuthContext";
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { HeroesApp } from "../HeroesApp";
 
 export const PrivateRouter = () => {
   const { logged } = useContext(AuthContext);
-  return (
-    logged
-      ? (<Outlet />) 
-      : ( <Navigate to={'/login'} />) 
-  );
+  return (logged) 
+    ? (<HeroesApp />) 
+    : ( <Navigate to={'/login'} />); 
 };

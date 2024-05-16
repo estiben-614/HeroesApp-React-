@@ -31,7 +31,8 @@ module.exports = {
     "space-infix-ops": ["error", { "int32Hint": false }],
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "arrow-parens": ["error", "always"],
-    "object-curly-spacing": ["error", "always"]
+    "object-curly-spacing": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"]
     
   },
 }

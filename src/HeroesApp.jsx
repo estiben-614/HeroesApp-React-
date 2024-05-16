@@ -1,18 +1,15 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import { Navbar } from './ui/components/NavBar';
 
-export const HeroesApp = () => {
-  return (
+export const HeroesApp = () => (
+  <>
+    <Navbar/>
 
-    <>
-      <Navbar/>
+    <div className="container">
+      <Outlet/>
+    </div>
 
-      <div className="container">
-        <Outlet/>
-      </div>
-
-      <Navigate to={"/marvel"}/>
-    </>
+    <Navigate to={"/marvel"}/>
+  </>
     
-  );
-};
+);
