@@ -38,14 +38,9 @@ export  const router = createBrowserRouter([
   {
     path:"/login",
     element:(
-      <PublicRoute />
+      <PublicRoute> <LoginPage /> </PublicRoute>
     ),
-    children: [
-      {
-        path: "/login",
-        element: <LoginPage />,
-      },
-    ],
+
   },
   {
     path:"/*",
