@@ -3,7 +3,7 @@ import { AuthContext } from "../context/types/AuthContext";
 import { Navigate } from "react-router-dom";
 import { HeroesApp } from "../HeroesApp";
 
-export const PrivateRouter = () => {
+export const PrivateRoute = () => {
   const { logged } = useContext(AuthContext);
   return (logged) 
     ? (<HeroesApp />) 
