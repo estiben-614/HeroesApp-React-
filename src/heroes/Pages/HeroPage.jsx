@@ -16,7 +16,7 @@ export const HeroPage = () => {
 
   const onReturn = () => {
      
-    navigate(-1);
+    navigate(-2);
   };
   return (
     <>

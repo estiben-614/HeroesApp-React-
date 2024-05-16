@@ -6,10 +6,11 @@ export const LoginPage = () => {
   const navigation = useNavigate();
 
   const { login } = useContext(AuthContext);
+  const lastPath = localStorage.getItem('lastPath') || '/';
   const onLogin = () => {
 
     login('Estiben Fernández Echeverri');
-    navigation('/',{
+    navigation(lastPath,{
       replace:true,
     });
   };
