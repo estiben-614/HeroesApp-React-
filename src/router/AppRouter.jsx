@@ -5,11 +5,16 @@ import { HeroesApp } from "../HeroesApp";
 import { LoginPage } from "../auth/Pages/LoginPage";
 import { SearchPage } from "../heroes/Pages/SearchPage";
 import { HeroPage } from "../heroes/Pages/HeroPage";
+import { PrivateRouter } from "./PrivateRouter";
 
 export  const router = createBrowserRouter([
   {
     path: "/",
-    element: <HeroesApp/>,
+    element: (
+      <PrivateRouter>
+        <HeroesApp/>
+      </PrivateRouter>
+    ),
     children: [
       {
         path: "/marvel",

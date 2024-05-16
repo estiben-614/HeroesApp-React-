@@ -14,7 +14,6 @@ export const AuthProvider = (
   { children },
 ) => {
   const [authState, dispatch] = useReducer(AuthReducer, {}, init);
-  console.log(authState)
   const login = (name = '') => {
     const user = {
       id: '32423',
@@ -33,7 +32,7 @@ export const AuthProvider = (
     const action = {
       type: types.logout,
     };
-    localStorage.setItem('user',  JSON.stringify({}));
+    localStorage.removeItem('user');
     dispatch(action);
 
   };
